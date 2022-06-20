@@ -3,7 +3,7 @@ package com.example.busticketbooking;
 import java.util.ArrayList;
 
 public class StoringSeatData {
-//    String BusID,Timings;
+//    String BusID,Timings; TEST
     ArrayList<Integer> BookedSeats=new ArrayList<>();
 
     public StoringSeatData(String busID, String timings, ArrayList<Integer> bookedSeats) {
