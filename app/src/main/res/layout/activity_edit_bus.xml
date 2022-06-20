@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:scrollbarSize="4dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="411dp"
+        android:layout_height="577dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/BusNumber"
+                android:layout_width="350dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="Enter Bus Number"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:windowSoftInputMode="adjustPan" />
+
+            <EditText
+                android:id="@+id/source"
+                android:layout_width="350dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="Enter source"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:windowSoftInputMode="adjustPan" />
+
+            <EditText
+                android:id="@+id/dest"
+                android:layout_width="350dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="Enter destination"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:windowSoftInputMode="adjustPan" />
+
+            <EditText
+                android:id="@+id/timings"
+                android:layout_width="350dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="Enter timings"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:windowSoftInputMode="adjustPan" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="350dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="Enter price"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:windowSoftInputMode="adjustPan" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/deletebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:scrollbarSize="18sp"
+                    android:text="Delete BUS"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/updatebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:text="Update Bus"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Edit Bus"
+        android:textColor="@color/bg_yellow"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

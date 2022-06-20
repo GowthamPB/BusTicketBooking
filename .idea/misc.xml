@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/BusTicketBooking/app/src/main/res/font/.xml" value="0.26666666666666666" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_add_bus.xml" value="0.23645833333333333" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_add_bus2.xml" value="0.22592592592592592" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_admin_dashboard.xml" value="0.2" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_book_bus.xml" value="0.264" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_customer_dashboard.xml" value="0.2" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_edit_bus.xml" value="0.23645833333333333" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_main_activity.xml" value="0.23645833333333333" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_payment.xml" value="0.23645833333333333" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_sign_in.xml" value="0.23645833333333333" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_sign_up.xml" value="0.23645833333333333" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.21666666666666667" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/bus_rv_item.xml" value="0.23645833333333333" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/content_add_bus.xml" value="0.22592592592592592" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/customer_bottom_sheet.xml" value="0.176" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/fragment_first.xml" value="0.22592592592592592" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/layout/fragment_second.xml" value="0.22592592592592592" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/menu/menu_main.xml" value="0.23645833333333333" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1615" />
+        <entry key="..\:/BusTicketBooking/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1615" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

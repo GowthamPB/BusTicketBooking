@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "499081694694",
+    "firebase_url": "https://busticketbooking-e7510-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "busticketbooking-e7510",
+    "storage_bucket": "busticketbooking-e7510.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499081694694:android:8639ab141c5b5122769a27",
+        "android_client_info": {
+          "package_name": "com.example.busticketbooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499081694694-2de0ohsdenpuvb65qnkg4cbkdjecdvjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8_7A0OODJDKpnN5MvAG39jixreDO5jkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499081694694-2de0ohsdenpuvb65qnkg4cbkdjecdvjd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

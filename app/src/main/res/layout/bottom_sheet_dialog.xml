@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idRLBSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:padding="4dp">
+
+    <!--text view for displaying course name-->
+    <TextView
+        android:id="@+id/idBusNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
+        android:padding="4dp"
+        android:text="Bus Number"
+        android:textColor="@color/bg_yellow"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!--image view for displaying course image-->
+    <ImageView
+        android:id="@+id/IdBusImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/idBusNum"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:padding="4dp"
+        android:src="@drawable/img" />
+
+    <!--text view for displaying course description-->
+    <TextView
+        android:id="@+id/idSrc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idBusNum"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toEndOf="@id/IdBusImg"
+        android:layout_toRightOf="@id/IdBusImg"
+        android:padding="3dp"
+        android:text="From"
+        android:textColor="@color/bg_yellow"
+        android:textStyle="bold" />
+
+    <!--text view for displaying course best suited for-->
+    <TextView
+        android:id="@+id/idDest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idSrc"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toRightOf="@id/IdBusImg"
+        android:padding="3dp"
+        android:text="To"
+        android:textColor="@color/bg_yellow"
+        android:textStyle="bold" />
+
+    <!--text view for displaying course price-->
+    <TextView
+        android:id="@+id/idTimings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idDest"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toRightOf="@id/IdBusImg"
+        android:padding="3dp"
+        android:text="Timings"
+        android:textColor="@color/bg_yellow"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTimings"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!--button for editing course-->
+        <Button
+            android:id="@+id/idBtnEditBus"
+            android:layout_width="385dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:height="60dp"
+            android:backgroundTint="@color/bg_yellow"
+            android:text="Edit Bus"
+            android:textAllCaps="false"
+            android:textColor="#120000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--button for viewing course details-->
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="411dp"
+        android:layout_height="571dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/BusNumber"
+                android:layout_width="350dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="3dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="Enter Bus Number"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:windowSoftInputMode="adjustPan" />
+
+            <EditText
+                android:id="@+id/source"
+                android:layout_width="350dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="Enter source"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:windowSoftInputMode="adjustPan" />
+
+            <EditText
+                android:id="@+id/dest"
+                android:layout_width="350dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="Enter destination"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:windowSoftInputMode="adjustPan" />
+
+            <EditText
+                android:id="@+id/timings"
+                android:layout_width="350dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="Enter timings"
+                android:inputType="time"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:windowSoftInputMode="adjustPan" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="350dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="Enter price"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:windowSoftInputMode="adjustPan" />
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="40dp"
+                android:text="Submit"
+                android:textColor="#040404"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:windowSoftInputMode="adjustPan" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Bus"
+        android:textColor="@color/bg_yellow"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
