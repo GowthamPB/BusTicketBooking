@@ -12,17 +12,18 @@ public class BusRVModel implements Parcelable{
     private String timings;
     private String price;
     private String BusID;
-
+    private String AvailableSeats;
     public BusRVModel() {
     }
 
-    public BusRVModel(String busNum, String src, String dest, String timings, String price, String busID ) {
+    public BusRVModel(String busNum, String src, String dest, String timings, String price, String busID, String availableSeats ) {
         this.busNum = busNum;
         this.src = src;
         this.dest = dest;
         this.timings = timings;
         this.price = price;
         BusID = busID;
+        AvailableSeats=availableSeats;
     }
 
     protected BusRVModel(Parcel in) {
@@ -32,6 +33,7 @@ public class BusRVModel implements Parcelable{
         timings = in.readString();
         price = in.readString();
         BusID = in.readString();
+        AvailableSeats=in.readString();
     }
 
     public static final Creator<BusRVModel> CREATOR = new Creator<BusRVModel>() {
@@ -99,6 +101,14 @@ public class BusRVModel implements Parcelable{
         return 0;
     }
 
+    public String getAvailableSeats() {
+        return AvailableSeats;
+    }
+
+    public void setAvailableSeats(String availableSeats) {
+        AvailableSeats = availableSeats;
+    }
+
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(busNum);
@@ -107,5 +117,6 @@ public class BusRVModel implements Parcelable{
         parcel.writeString(timings);
         parcel.writeString(price);
         parcel.writeString(BusID);
+        parcel.writeString(AvailableSeats);
     }
 }

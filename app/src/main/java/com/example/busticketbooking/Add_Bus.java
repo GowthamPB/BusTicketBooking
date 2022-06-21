@@ -22,6 +22,7 @@ public class Add_Bus extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private String BusID;
+    private String availableSeats;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,8 @@ public class Add_Bus extends AppCompatActivity {
                 String timingsVar=timings.getText().toString();
                 String priceVar=price.getText().toString();
                 BusID=busNumVar;
-                BusRVModel busRVModel=new BusRVModel(busNumVar,srcVar,destVar,timingsVar,priceVar,BusID);
+                availableSeats="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24";
+                BusRVModel busRVModel=new BusRVModel(busNumVar,srcVar,destVar,timingsVar,priceVar,BusID,availableSeats);
                 databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
