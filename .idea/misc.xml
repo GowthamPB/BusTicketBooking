@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/BUSPROJECT/app/src/main/res/layout/activity_book_bus.xml" value="0.264" />
+        <entry key="..\:/BUSPROJECT/app/src/main/res/layout/activity_customer_dashboard.xml" value="0.23645833333333333" />
+        <entry key="..\:/BUSPROJECT/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
+        <entry key="..\:/BUSPROJECT/app/src/main/res/layout/activity_main_activity.xml" value="0.23645833333333333" />
+        <entry key="..\:/BUSPROJECT/app/src/main/res/layout/activity_payment.xml" value="0.23645833333333333" />
+        <entry key="..\:/BUSPROJECT/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.23645833333333333" />
         <entry key="..\:/BusTicketBooking/app/src/main/res/font/.xml" value="0.26666666666666666" />
         <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_add_bus.xml" value="0.23645833333333333" />
         <entry key="..\:/BusTicketBooking/app/src/main/res/layout/activity_add_bus2.xml" value="0.22592592592592592" />
