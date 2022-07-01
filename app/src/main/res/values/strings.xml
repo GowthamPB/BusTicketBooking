@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Yellow bus</string>
+    <string name="app_name">Yellow Bus</string>
     <string name="hello_there_welcome_back">Hello there, welcome back!</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>

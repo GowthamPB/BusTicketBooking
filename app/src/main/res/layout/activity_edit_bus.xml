@@ -100,6 +100,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/bg_yellow"
                     android:scrollbarSize="18sp"
                     android:text="Delete BUS"
                     android:textColor="#000000"
@@ -114,6 +115,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/bg_yellow"
                     android:text="Update Bus"
                     android:textColor="#000000"
                     android:textStyle="bold" />
