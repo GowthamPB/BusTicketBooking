@@ -14,5 +14,6 @@
   <li>Razorpay API</li>
  </ul>
  
+     NOTE: If you're forking this repo, be sure to change the firebase connection
  
  
