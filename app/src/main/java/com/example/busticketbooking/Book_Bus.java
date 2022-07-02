@@ -36,10 +36,14 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
     Button buttonDone,ResetBtn;
     String AvailSeats;
     public String BusID;
+
     int count=0;
+    Boolean flag;
+    int[] array=new int[1];
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     ArrayList<Integer> SeatArrayList=new ArrayList<>();
+    ArrayList<Integer> SeatsAL=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,7 +130,7 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
         BusID=busRVModel.getBusID();
         firebaseDatabase=FirebaseDatabase.getInstance();
         databaseReference=firebaseDatabase.getReference("Bus").child(BusID);
-       String AvailableSeats=busRVModel.getAvailableSeats();
+        String AvailableSeats=busRVModel.getAvailableSeats();
         Seats=AvailableSeats.split(",");
         for (String seat : Seats) {
             SeatArrayList.add(Integer.valueOf(seat));
@@ -235,9 +239,10 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
             public void onClick(View view) {
 //                flag+=1;
 //                if(flag%2==0) {
-                    SeatArrayList.remove(Integer.valueOf(1));
-                    button1.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(1));
+                SeatsAL.add(1);
+                button1.setBackgroundColor(Color.GREEN);
+                count++;
 //                }
 //                else{
 //                    SeatArrayList.add(1);
@@ -248,185 +253,208 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(2));
-                    button2.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(2));
+                SeatsAL.add(2);
+                button2.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(3));
-                    button3.setBackgroundColor(Color.GREEN);
+                SeatArrayList.remove(Integer.valueOf(3));
+                SeatsAL.add(3);
+                button3.setBackgroundColor(Color.GREEN);
                 count++;
             }
         });
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(4));
-                    button4.setBackgroundColor(Color.GREEN);
+                SeatArrayList.remove(Integer.valueOf(4));
+                SeatsAL.add(4);
+                button4.setBackgroundColor(Color.GREEN);
                 count++;
             }
         });
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(5));
-                    button5.setBackgroundColor(Color.GREEN);
+                SeatArrayList.remove(Integer.valueOf(5));
+                SeatsAL.add(5);
+                button5.setBackgroundColor(Color.GREEN);
                 count++;
             }
         });
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(6));
-                    button6.setBackgroundColor(Color.GREEN);
+                SeatArrayList.remove(Integer.valueOf(6));
+                SeatsAL.add(6);
+                button6.setBackgroundColor(Color.GREEN);
                 count++;
             }
         });
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(7));
-                    button7.setBackgroundColor(Color.GREEN);
+                SeatArrayList.remove(Integer.valueOf(7));
+                SeatsAL.add(7);
+                button7.setBackgroundColor(Color.GREEN);
                 count++;
             }
         });
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(8));
-                    button8.setBackgroundColor(Color.GREEN);
+                SeatArrayList.remove(Integer.valueOf(8));
+                SeatsAL.add(8);
+                button8.setBackgroundColor(Color.GREEN);
                 count++;
             }
         });
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(9));
-                    button9.setBackgroundColor(Color.GREEN);
+                SeatArrayList.remove(Integer.valueOf(9));
+                SeatsAL.add(9);
+                button9.setBackgroundColor(Color.GREEN);
                 count++;
             }
         });
         button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(10));
-                    button10.setBackgroundColor(Color.GREEN);
+                SeatArrayList.remove(Integer.valueOf(10));
+                SeatsAL.add(10);
+                button10.setBackgroundColor(Color.GREEN);
                 count++;
             }
         });
         button11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(11));
-                    button11.setBackgroundColor(Color.GREEN);
+                SeatArrayList.remove(Integer.valueOf(11));
+                SeatsAL.add(11);
+                button11.setBackgroundColor(Color.GREEN);
                 count++;
             }
         });
         button12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(12));
-                    button12.setBackgroundColor(Color.GREEN);
+                SeatArrayList.remove(Integer.valueOf(12));
+                SeatsAL.add(12);
+                button12.setBackgroundColor(Color.GREEN);
                 count++;
-           }
+            }
         });
         button13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(13));
-                    button13.setBackgroundColor(Color.GREEN);
+                SeatArrayList.remove(Integer.valueOf(13));
+                SeatsAL.add(13);
+                button13.setBackgroundColor(Color.GREEN);
                 count++;
             }
         });
         button14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(14));
-                    button14.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(14));
+                SeatsAL.add(14);
+                button14.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
         button15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(15));
-                    button15.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(15));
+                SeatsAL.add(15);
+                button15.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
         button16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(16));
-                    button16.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(16));
+                SeatsAL.add(16);
+                button16.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
         button17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(17));
-                    button17.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(17));
+                SeatsAL.add(17);
+                button17.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
         button18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(18));
-                    button18.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(18));
+                SeatsAL.add(18);
+                button18.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
         button19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(19));
-                    button19.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(19));
+                SeatsAL.add(19);
+                button19.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
         button20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(20));
-                    button20.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(20));
+                SeatsAL.add(20);
+                button20.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
         button21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(21));
-                    button21.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(21));
+                SeatsAL.add(21);
+                button21.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
         button22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(22));
-                    button22.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(22));
+                SeatsAL.add(22);
+                button22.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
         button23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(23));
-                    button23.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(23));
+                SeatsAL.add(23);
+                button23.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
         button24.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    SeatArrayList.remove(Integer.valueOf(24));
-                    button24.setBackgroundColor(Color.GREEN);
-                    count++;
+                SeatArrayList.remove(Integer.valueOf(24));
+                SeatsAL.add(24);
+                button24.setBackgroundColor(Color.GREEN);
+                count++;
             }
         });
 
@@ -448,14 +476,16 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
         buttonDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (SeatArrayList.size()==24) {
+                if (SeatsAL.isEmpty()) {
                     Toast.makeText(Book_Bus.this, "Select a minimum of 1 seat to pay", Toast.LENGTH_SHORT).show();
                 } else{
 
                     Toast.makeText(Book_Bus.this, "Redirecting...", Toast.LENGTH_SHORT).show();
                     int amount=count*Integer.valueOf(price)*100;
                     count=0;
-                    RazorPayAPI(amount);
+
+
+                    razorPayAPI(amount);
 
                     AvailSeats=String.valueOf(SeatArrayList.get(0));
                     for(int i=1;i<SeatArrayList.size();i++){
@@ -477,25 +507,45 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
                             Toast.makeText(Book_Bus.this, "All seats booked", Toast.LENGTH_SHORT).show();
                         }
                     });
-
+                    String FinalSeats="";
+                    for(int i=0;i<SeatsAL.size();i++){
+                        FinalSeats+=SeatsAL.get(i);
+                        if(i!=SeatsAL.size()-1){
+                            FinalSeats+=",";
+                        }
+                    }
+                    if(flag) {
+                        Intent intent = new Intent(Book_Bus.this, Ticket.class);
+                        intent.putExtra("BusID", busRVModel.getBusID());
+                        intent.putExtra("Source", busRVModel.getSrc());
+                        intent.putExtra("Destination", busRVModel.getDest());
+                        intent.putExtra("Timings", busRVModel.getTimings());
+                        intent.putExtra("Seats", FinalSeats);
+                        startActivity(intent);
+                        finish();
+                    }else{
+                        Toast.makeText(Book_Bus.this, "Try again", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
 
-            private void RazorPayAPI(int amount) {
+            private void razorPayAPI(int amount) {
                 Checkout checkout=new Checkout();
-                checkout.setKeyID("<enter key id>");
+                checkout.setKeyID("<keyid>");
                 JSONObject object=new JSONObject();
                 try {
-                    object.put("name","Gowtham");
-                    object.put("Description","Travel");
+                    object.put("name","Yellow Bus");
+                    object.put("Description","Bus Ticket");
                     object.put("theme.color",bg_yellow);
                     object.put("currency","INR");
                     object.put("amount",amount);
-                    object.put("prefill.contact","<enter contact>>");
-                    object.put("prefill.email","<enter email>");
+                    object.put("prefill.contact","<phone>");
+                    object.put("prefill.email","<email>");
                     checkout.open(Book_Bus.this,object);
+                    flag=true;
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    flag=false;
                 }
             }
         });
@@ -508,13 +558,14 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
         Toast.makeText(this, "Payment Successful", Toast.LENGTH_SHORT).show();
 //        builder.setMessage(s);
 //        builder.show();
-        Intent intent=new Intent(Book_Bus.this,Customer_Dashboard.class);
-        startActivity(intent);
-
     }
 
     @Override
     public void onPaymentError(int i, String s) {
         Toast.makeText(getApplicationContext(), "Payment Cancelled", Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void onBackPressed(){
+        startActivity(new Intent(Book_Bus.this,Customer_Dashboard.class));
     }
 }
