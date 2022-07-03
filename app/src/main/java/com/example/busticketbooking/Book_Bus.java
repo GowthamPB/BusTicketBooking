@@ -36,10 +36,9 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
     Button buttonDone,ResetBtn;
     String AvailSeats;
     public String BusID;
-
+    BusRVModel busRVModel;
     int count=0;
     Boolean flag;
-    int[] array=new int[1];
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     ArrayList<Integer> SeatArrayList=new ArrayList<>();
@@ -126,7 +125,7 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
 
         String[] Seats;
         int bg_yellow = getResources().getColor(R.color.bg_yellow);
-        BusRVModel busRVModel = getIntent().getParcelableExtra("Bus");
+        busRVModel = getIntent().getParcelableExtra("Bus");
         BusID=busRVModel.getBusID();
         firebaseDatabase=FirebaseDatabase.getInstance();
         databaseReference=firebaseDatabase.getReference("Bus").child(BusID);
@@ -468,70 +467,41 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
             }
         });
 
+//Displays the price of each seat in the present bus
         String price=busRVModel.getPrice();
         TextView priceDisplay=findViewById(R.id.priceDisplay);
         priceDisplay.setText("Price per seat: Rs."+ price);
 
-
         buttonDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//Checking if any seats are selected
                 if (SeatsAL.isEmpty()) {
+//Runs if no seats selected
                     Toast.makeText(Book_Bus.this, "Select a minimum of 1 seat to pay", Toast.LENGTH_SHORT).show();
                 } else{
-
+//Runs if seats are selected
                     Toast.makeText(Book_Bus.this, "Redirecting...", Toast.LENGTH_SHORT).show();
+
+//Calculating Ticket price
                     int amount=count*Integer.valueOf(price)*100;
                     count=0;
 
-
+//Calling Razorpay API
                     razorPayAPI(amount);
 
+//Converting arraylist into strings so as to update in Database
                     AvailSeats=String.valueOf(SeatArrayList.get(0));
                     for(int i=1;i<SeatArrayList.size();i++){
                         AvailSeats+=","+String.valueOf(SeatArrayList.get(i));
                     }
-
-                    Map<String,Object> map=new HashMap<>();
-                    map.put("availableSeats", AvailSeats);
-
-
-                    databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            databaseReference.updateChildren(map);
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-                            Toast.makeText(Book_Bus.this, "All seats booked", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    String FinalSeats="";
-                    for(int i=0;i<SeatsAL.size();i++){
-                        FinalSeats+=SeatsAL.get(i);
-                        if(i!=SeatsAL.size()-1){
-                            FinalSeats+=",";
-                        }
-                    }
-                    if(flag) {
-                        Intent intent = new Intent(Book_Bus.this, Ticket.class);
-                        intent.putExtra("BusID", busRVModel.getBusID());
-                        intent.putExtra("Source", busRVModel.getSrc());
-                        intent.putExtra("Destination", busRVModel.getDest());
-                        intent.putExtra("Timings", busRVModel.getTimings());
-                        intent.putExtra("Seats", FinalSeats);
-                        startActivity(intent);
-                        finish();
-                    }else{
-                        Toast.makeText(Book_Bus.this, "Try again", Toast.LENGTH_SHORT).show();
-                    }
                 }
             }
 
+//The RazorPay API method
             private void razorPayAPI(int amount) {
                 Checkout checkout=new Checkout();
-                checkout.setKeyID("<keyid>");
+                checkout.setKeyID("<keyID>");
                 JSONObject object=new JSONObject();
                 try {
                     object.put("name","Yellow Bus");
@@ -542,15 +512,15 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
                     object.put("prefill.contact","<phone>");
                     object.put("prefill.email","<email>");
                     checkout.open(Book_Bus.this,object);
-                    flag=true;
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    flag=false;
                 }
             }
         });
     }
 
+
+    //Method related to RazorPay API
     @Override
     public void onPaymentSuccess(String s) {
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
@@ -558,12 +528,48 @@ public class Book_Bus extends AppCompatActivity implements PaymentResultListener
         Toast.makeText(this, "Payment Successful", Toast.LENGTH_SHORT).show();
 //        builder.setMessage(s);
 //        builder.show();
+        String FinalSeats="";
+        for(int i=0;i<SeatsAL.size();i++){
+            FinalSeats+=SeatsAL.get(i);
+            if(i!=SeatsAL.size()-1){
+                FinalSeats+=",";
+            }
+        }
+        Intent intent = new Intent(Book_Bus.this, Ticket.class);
+        intent.putExtra("BusID", busRVModel.getBusID());
+        intent.putExtra("Source", busRVModel.getSrc());
+        intent.putExtra("Destination", busRVModel.getDest());
+        intent.putExtra("Timings", busRVModel.getTimings());
+        intent.putExtra("Seats", FinalSeats);
+        startActivity(intent);
+        finish();
+
+//Updating value of available seats in Database
+        Map<String,Object> map=new HashMap<>();
+        map.put("availableSeats", AvailSeats);
+
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                databaseReference.updateChildren(map);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(Book_Bus.this, "All seats booked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
+    //Method related to RazorPay API
     @Override
     public void onPaymentError(int i, String s) {
         Toast.makeText(getApplicationContext(), "Payment Cancelled", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Book_Bus.this, "Try again", Toast.LENGTH_SHORT).show();
     }
+
+    //Method to change the default action of Back button
     @Override
     public void onBackPressed(){
         startActivity(new Intent(Book_Bus.this,Customer_Dashboard.class));

@@ -65,7 +65,7 @@ public class SignUp extends AppCompatActivity {
                                     name.setError(null);
                                         if (email1.matches("^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")) {
                                             email.setError(null);
-                                            if (password1.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")) {
+                                            if (password1.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,20}$")) {
                                                 password.setError(null);
                                                 loader.setMessage("Sign Up in progress...");
                                                 loader.setCanceledOnTouchOutside(false);

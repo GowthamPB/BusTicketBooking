@@ -27,9 +27,6 @@ import java.util.ArrayList;
 
 public class Ticket extends AppCompatActivity {
     TextView VarBusID,VarSrc,VarDest,VarTimings,VarSeat;
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
-    String BusID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +47,9 @@ public class Ticket extends AppCompatActivity {
         VarSrc.setText("From: "+src);
         VarDest.setText("To: "+dest);
         VarTimings.setText("Timings: "+Timings);
-        VarSeat.setText("Seat Num: "+Seats);
+        VarSeat.setText("Seat: "+Seats);
 
+        //Creating PDF of activity
         View view = getWindow().getDecorView().findViewById(android.R.id.content);
         view.setDrawingCacheEnabled(true);
         view.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),View. MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));

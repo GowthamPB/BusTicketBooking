@@ -14,7 +14,7 @@
 
         <ImageView
             android:id="@+id/IdBusImg"
-            android:layout_width="322dp"
+            android:layout_width="282dp"
             android:layout_height="200dp"
             android:layout_marginLeft="40dp"
             android:background="@drawable/img"
