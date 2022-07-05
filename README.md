@@ -14,6 +14,7 @@
   <li>Razorpay API</li>
  </ul>
  
-     NOTE: If you're forking this repo, be sure to change the firebase connection
+     NOTE: LAUDE 80000 LINES KA CODE HE, 80000 LINES KA, TERA PURA ANDROID STUDIO CRASH HO JAYEGA
+     TERA STUDIO CRASH HO JAYEGA, CODE DEKH
  
  
